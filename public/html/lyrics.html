@@ -18,35 +18,57 @@
     </div>
 
     <div class="button-section">
-      <a href="#"><button class="bts">Products</button></a>
-      <a href="#"><button class="bts">Get App</button></a>
-      <div id="authSection">
-        <a href="./Login.html"><button class="bts" id="authBtn">Login / Sign up</button></a>
+      <nav class="quick-actions" aria-label="Primary navigation">
+        <a href="#" class="bts">Products</a>
+        <a href="#" class="bts">Get App</a>
+      </nav>
 
-        <div class="user-profile hidden" id="userProfile" aria-label="User profile">
-          <div class="avatar" id="avatar" aria-hidden="true"></div>
-          <span class="username" id="username"></span>
+      <div class="account-actions">
+        <div id="authSection">
+          <a href="./Login.html" class="bts" id="authBtn">Login / Sign up</a>
 
-          <div class="profile-dropdown hidden" id="profileDropdown">
-            <div class="dropdown-item" id="dropdownUsername"></div>
-            <button class="btn logout-btn" id="logoutBtn">Logout</button>
+          <div
+            class="user-profile hidden"
+            id="userProfile"
+            aria-label="User profile"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-controls="profileDropdown"
+            role="button"
+            tabindex="0"
+          >
+            <div class="avatar" id="avatar" aria-hidden="true"></div>
+            <span class="username" id="username"></span>
+
+            <div class="profile-dropdown hidden" id="profileDropdown" role="menu">
+              <div class="dropdown-item" id="dropdownUsername"></div>
+              <button class="btn logout-btn" id="logoutBtn">Logout</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <button type="button" class="menu-button" id="menuToggleButton" aria-label="Open menu">
-        <img class="menu-icon" src="icons/menu4.png" alt="">
-      </button>
+        <button
+          class="menu-button"
+          id="menuButton"
+          type="button"
+          aria-label="Open display settings"
+          aria-controls="menu-panel"
+          aria-expanded="false"
+          onclick="toggleMenu()"
+        >
+          <img class="menu-icon" src="icons/menu4.png" alt="">
+        </button>
+      </div>
     </div>
 
     <div class="menu-panel" id="menu-panel">
       <div class="theme-section">
-        <button id="lightModeBtn" class="theme-btn" type="button" data-theme="light">
+        <button id="lightModeBtn" class="theme-btn" onclick="setTheme('light')">
           <p>Light Mode</p>
           <img src="icons/light-mode1.png" alt="">
         </button>
 
-        <button id="darkModeBtn" class="theme-btn" type="button" data-theme="dark">
+        <button id="darkModeBtn" class="theme-btn" onclick="setTheme('dark')">
           <p>Dark Mode</p>
           <img src="icons/dark-mode.png" alt="">
         </button>
