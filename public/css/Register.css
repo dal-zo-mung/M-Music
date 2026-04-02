@@ -6,7 +6,7 @@ body {
 }
 
 #container {
-  width: min(420px, 100%);
+  width: min(420px,80%);
   margin: 0 auto;
   background-color: #363c4ed5;
   border-radius: 35px;
@@ -286,9 +286,10 @@ h3 {
   color: #0ea8d3;
   text-decoration: underline;
 }
-@media (max-width: 480px) {
+@media (max-width: 520px) {
+  
   .box1 {
-    width: 100%;
+    width: 90%;
   }
 
   #box12 {
