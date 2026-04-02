@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>M-Music - Lyrics</title>
+  <link rel="stylesheet" href="index.css?v=5">
+  <link rel="stylesheet" href="lyrics.css?v=5">
+  <link rel="icon" type="images/png" href="images/M-Music.png">
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="brand">M-Music</h1>
+
+    <div class="search-wrap">
+      <input id="searchbox" type="text" placeholder="Find a song or artist...">
+      <button id="searchbt" class="btn">Search</button>
+    </div>
+
+    <div class="button-section">
+      <a href="#"><button class="bts">Products</button></a>
+      <a href="#"><button class="bts">Get App</button></a>
+      <div id="authSection">
+        <a href="./Login.html"><button class="bts" id="authBtn">Login / Sign up</button></a>
+
+        <div class="user-profile hidden" id="userProfile" aria-label="User profile">
+          <div class="avatar" id="avatar" aria-hidden="true"></div>
+          <span class="username" id="username"></span>
+
+          <div class="profile-dropdown hidden" id="profileDropdown">
+            <div class="dropdown-item" id="dropdownUsername"></div>
+            <button class="btn logout-btn" id="logoutBtn">Logout</button>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="menu-button" id="menuToggleButton" aria-label="Open menu">
+        <img class="menu-icon" src="icons/menu4.png" alt="">
+      </button>
+    </div>
+
+    <div class="menu-panel" id="menu-panel">
+      <div class="theme-section">
+        <button id="lightModeBtn" class="theme-btn" type="button" data-theme="light">
+          <p>Light Mode</p>
+          <img src="icons/light-mode1.png" alt="">
+        </button>
+
+        <button id="darkModeBtn" class="theme-btn" type="button" data-theme="dark">
+          <p>Dark Mode</p>
+          <img src="icons/dark-mode.png" alt="">
+        </button>
+      </div>
+
+      <div class="slider-section">
+        <img src="icons/font-size2.png" alt="">
+        <input type="range" id="fontSlider" min="10" max="40" value="18">
+      </div>
+
+      <div class="slider-section">
+        <img src="icons/scroll2.png" alt="">
+        <input type="range" id="scrollSpeedSlider" min="10" max="40" value="18">
+      </div>
+    </div>
+  </header>
+
+  <div id="searchResults" class="search-results"></div>
+
+  <main class="main-grid">
+    <section class="player-card">
+      <div class="cover-wrap">
+        <img id="albumCover" class="cover" src="images/music-logo.jpg" alt="Album cover">
+        <div id="spinner" class="spinner hidden"></div>
+      </div>
+
+      <div class="player-meta">
+        <h2 id="songTitle">Loading...</h2>
+        <p id="artist">-</p>
+        <p id="releaseDate" class="muted">-</p>
+        <p id="songGenre" class="muted">-</p>
+        <br>
+        <a id="youtubeLink" class="link" href="#" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+      </div>
+    </section>
+
+    <section class="lyrics-card">
+      <div class="lyrics-header">
+        <h3>Lyrics</h3>
+        <div class="small-muted" id="lineHint">Use left and right arrow keys to navigate songs. Press Enter to search.</div>
+      </div>
+
+      <div class="player-actions">
+        <button id="copybt" class="btn">Copy Lyrics</button>
+      </div>
+
+      <div class="controls-right">
+        <button id="prevBtn" title="Previous (Left Arrow)" class="icon-btn">&#9664;</button>
+        <button id="nextBtn" title="Next (Right Arrow)" class="icon-btn">&#9654;</button>
+        <button id="autoScrollToggle" class="btn">Auto-scroll: OFF</button>
+      </div>
+
+      <div id="lyricsContainer" class="lyrics-container">
+        <pre id="lyricsText" class="lyrics-text">Loading lyrics...</pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>&copy; M-Music</div>
+  </footer>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>

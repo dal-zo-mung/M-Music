@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M-Music Login</title>
+  <link rel="stylesheet" href="Login.css">
+  <link rel="icon" type="images/png" href="images/M-Music.png">
+</head>
+<body>
+  <div class="m-musiclogo">
+    <img id="img0" src="images/M-Music.png" alt="M-Music logo">
+    <img id="Mnotes" src="icons/vertical-line.png" alt="M-Music notes">
+    <img id="Mnotes" src="icons/1.Eight note.png" alt="M-Music notes">
+    <img id="Mnotes" src="icons/Eight rest note.png" alt="M-Music notes">
+    <img id="Mnotes" src="icons/Eight note.png" alt="M-Music notes">
+    <img id="Mnotes" src="icons/quatar rest note.png" alt="M-Music notes"> 
+  </div>
+
+
+  <form id="container">
+    <h1 class="form-title">Welcome Back</h1>
+
+    <label id="username" for="usernameInput">Username:</label>
+    <input
+      id="usernameInput"
+      class="inputbox"
+      name="username"
+      type="text"
+      placeholder="Enter username"
+      autocomplete="username"
+      required
+    >
+    <img class="input-icon" src="images/User.png" alt="Userlogo">
+
+    <label id="password" for="passwordInput">Password:</label>
+    <input
+      id="passwordInput"
+      class="inputbox"
+      name="password"
+      type="password"
+      placeholder="Enter your password"
+      autocomplete="current-password"
+      required
+    >
+    <button id="togglePassword" type="button" class="toggle-password" aria-label="Show password">
+      <img id="togglePasswordIcon" src="/icons/visibility_off.svg" alt="Show password">
+    </button>
+
+    <div id="passwordValidation" class="password-validation"></div>
+    <div id="formMessage" class="form-message" aria-live="polite"></div>
+
+    <div id="googleAuth" class="oauth-section">
+      <a class="oauth-button" href="/auth/google" id="loginWithGoogle">
+        <img class="oauth-icon" src="images/Google1.png" alt="Google logo" />
+        <p id="googletext">Continue with Google ... . .</p>
+      </a>
+    </div>
+
+    <div class="button">
+      <button id="resetbt" type="reset">Reset</button>
+      <button id="loginbt" type="submit">Login</button>
+    </div>
+
+    <label id="newer">Are you a newer?</label>
+    <a id="registerbt" href="Register.html">Register here</a>
+    <img id="img3" src="images/Register.3.png" alt="">
+  </form>
+
+  <script src="js/auth/utils.js"></script>
+  <script src="js/auth/login.js"></script>
+</body>
+</html>

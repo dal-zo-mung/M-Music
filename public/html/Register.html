@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M-Music Register</title>
+    <link rel="stylesheet" href="Register.css">
+    <link rel="icon" type="images/png" href="images/M-Music.png">
+</head>
+<body>
+
+    <form id="container">
+        <h1>Create Your Account</h1>
+
+        <h3>Your Name:</h3>
+        <input id="box11" class="box1" type="text" placeholder="First name" autocomplete="given-name" required>
+        <input id="box12" class="box1" type="text" placeholder="Last name" autocomplete="family-name" required>
+
+        <h3>Username:</h3>
+        <input id="usernameInput" class="box23" type="text" placeholder="Choose a username" autocomplete="username" required>
+
+        <p id="authp">NOTE: Your password must contain at least one 
+            <span style="color:red">'uppercase'</span> and <span style="color:red">'lowercase'</span> letter, 
+            <span style="color:red">'number'</span> and <span style="color:red">'special' </span>character.
+        </p>
+
+        <h3>New Password:</h3>
+        <div class="password-row">
+            <input id="passwordInput" class="box23" type="password" placeholder="Enter new password" autocomplete="new-password" required>
+            <button type="button" id="togglePassword" class="password-toggle" aria-label="Show new password">
+                <img class="password-toggle-icon" src="/icons/visibility.svg" alt="Show new password">
+            </button>
+        </div>
+        <div id="passwordValidation" class="password-validation"></div>
+
+        <h3>Confirm Password:</h3>
+        <div class="password-row">
+            <input id="confirmPasswordInput" class="box23" type="password" placeholder="Confirm your password" autocomplete="new-password" required>
+            <button type="button" id="toggleConfirmPassword" class="password-toggle" aria-label="Show confirm password">
+                <img class="password-toggle-icon" src="/icons/visibility.svg" alt="Show confirm password">
+            </button>
+        </div>
+
+        <div id="formMessage" class="form-message" aria-live="polite"></div>
+
+        <p id="or">Or</p>
+
+        <div id="Google">
+            <a href="/auth/google" id="loginwithGoogle">
+                <img src="images/Google1.png" id="GoogleIcon" alt="Sign in with Google">
+                <p>Continue with Google ...... . .</p>
+            </a>
+        </div>
+
+        <div id="buttons">
+            <button id="resetButton" type="reset">Reset</button>
+            <button id="loginButton" type="submit">Register</button>
+        </div>
+
+        <label id="useragree">
+            <input type="checkbox" required id="checkbox">
+            <p id="termpolicy">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</p>
+        </label>
+
+        <p id="loginLink">Already have an account? <a href="Login.html">Login here</a></p>
+    </form>
+
+    <script src="js/auth/utils.js"></script>
+    <script src="js/auth/register.js"></script>
+</body>
+</html>

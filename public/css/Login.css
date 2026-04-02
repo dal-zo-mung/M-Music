@@ -1,0 +1,287 @@
+body {
+    background-color: #abf6fb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/* Logo */
+#img0 {
+    width: 70px;
+}
+#Mnotes{
+    width: 40px;
+    height: 40px;
+}
+
+h1{
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 0px;
+    font-family: Sriracha-Regular;
+    color: white;
+}
+
+/* Container */
+#container {
+    margin-top: 15px;
+    width: 330px;
+    height: 30rem;
+    background-color: #363c4ed7;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 10px;
+}
+
+/* Fonts */
+@font-face {
+    src: url(../fonts/Sriracha-Regular.ttf);
+    font-family: Sriracha-Regular;
+}
+@font-face {
+    src: url(../fonts/SreeKrushnadevaraya-Regular.ttf);
+    font-family: SreeKrushnadevaraya-Regular;
+}
+
+/* Labels */
+label {
+    margin-top: 70px;
+    left: 30px;
+    position: absolute;
+    font-family: Sriracha-Regular;
+    font-size: 17px;
+    color: white;
+}
+
+#username {
+    top: 0px;
+}
+
+#password {
+    top: 100px;
+}
+
+/* Input fields (FIXED: was #inputbox, now .inputbox) */
+.inputbox{
+    margin-top: 55px;
+    position: absolute;
+    width: 240px;
+    height: 50px;
+    background-color: #abf6fb;
+    border-radius: 30px;
+    padding: 0 15px 6px;
+    border: none;
+    outline: none;
+    font-family: SreeKrushnadevaraya-Regular;
+    font-size: 18px;
+    left: 30px;
+}
+
+#usernameInput{
+    top: 50px;
+}
+
+#passwordInput{
+    top: 150px;
+}
+
+/* Toggle eye button */
+.toggle-password{
+    margin-top: 83px;
+    position: absolute;
+    top: 140px;
+    right: 60px;
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+.toggle-password img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+#togglePasswordIcon svg{
+    outline: none;
+    border: none;
+}
+
+.toggle-password,
+.toggle-password img{
+    outline: none;
+    border: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.toggle-password:hover,
+.toggle-password:focus,
+.toggle-password:active,
+#togglePasswordIcon:focus,
+#togglePasswordIcon:active{
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent;
+}
+
+/* Icons */
+.input-icon{
+    margin-top: 55px;
+    margin-left: 6px;
+    position: absolute;
+    width: 23px;
+    top: 65px;
+    left: 240px;
+}
+
+.password-icon{
+    top: 145px;
+}
+
+/* Message */
+.form-message{
+    position: absolute;
+    top: 270px;
+    left: 30px;
+    width: 240px;
+    color: rgb(235, 74, 74);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.password-validation-list {
+    list-style: none;
+    padding: 0;
+    margin: 6px 0 0;
+}
+
+.password-validation-list li {
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.password-validation-list li.valid {
+    color: #84efb6;
+}
+
+.password-validation-list li.invalid {
+    color: #f8caca;
+}
+
+/* Buttons */
+button{
+    margin-top: 100px;
+    position: absolute;
+    border: none;
+    background-color: #abf6fb;
+    cursor: pointer;
+    font-family: SreeKrushnadevaraya-Regular;
+    font-size: 15px;
+}
+button:hover{
+    font-size: 16px;
+    font-weight: bold;
+    background-color: aqua;
+}
+
+/* Button container */
+.button{
+    position: relative;
+    top: 250px;
+}
+
+/* Individual buttons */
+#resetbt{
+    left: 150px;
+    width: 70px;
+    height: 35px;
+    border-radius: 40px;
+}
+
+#loginbt{
+    left: 230px;
+    width: 70px;
+    height: 35px;
+    border-radius: 40px;
+}
+
+/* Register section */
+#newer{
+    position: absolute;
+    font-size: 15px;
+    top: 330px;
+    left: 30px;
+    color: white;
+}
+
+.oauth-icon{
+    position: absolute;
+    top: -10px;
+    width: 65px;
+    left: -75px;
+}
+.oauth-section{
+    display: flex;
+    gap: 20px; /* spacing between links */
+    position: absolute;
+    top: 295px;
+    left: 100px;
+}
+#googletext{
+    font-family: Sriracha-Regular;
+    margin-top: 8px;
+    font-weight: 100;
+    font-size: 15px;
+}
+.oauth-button{
+    color: aqua;
+    text-decoration: none;
+}
+.oauth-button:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+
+#registerbt {
+    position: absolute;
+    top: 88%;
+    left: 80px;
+    width: 160px;
+    height: 35px;
+    border-radius: 40px;
+    font-family: Sriracha-Regular;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #abf6fb;
+}
+#registerbt:hover {
+    background-color: aqua;
+    font-size: 17px;
+    font-weight: bold;
+}
+/* Register icon */
+#img3 {
+    position: absolute;
+    width: 23px;
+    top: 89%;
+    left: 250px;
+}
