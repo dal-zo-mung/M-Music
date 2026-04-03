@@ -2,7 +2,7 @@
 
 M-Music is a lyric discovery web app built with Express, MongoDB, and a static frontend. It supports local account login, Google OAuth, searchable lyric browsing, theme controls, and lyric-reader interactions like copy and auto-scroll.
 
-## Live Demon ### Url: [https://m-music-8dun.onrender.com/](https://m-music-8dun.onrender.com/)
+Live Demon Url: [https://m-music-8dun.onrender.com/](https://m-music-8dun.onrender.com/)
 
 ## Stack
 
