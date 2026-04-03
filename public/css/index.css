@@ -332,13 +332,8 @@ body {
     }
 
     .menu-button {
-        width: clamp(30px, 8.2vw, 37px);
-        height: clamp(30px, 8.2vw, 37px);
-    }
-
-    .menu-icon {
-        width: clamp(18px, 4.5vw, 23px);
-        height: clamp(18px, 4.5vw, 23px);
+        width: clamp(20px, 8.2vw, 37px);
+        height: clamp(20px, 8.2vw, 37px);
     }
 
     .user-profile {
