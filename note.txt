@@ -1,0 +1,24 @@
+const query = req.params.query; 
+What is req.params.query?
+    Meaning = the text user typed.
+    → req.params.query = "love"
+
+$or: [{A}, {B}, {C}]
+What is $or?
+    Means:
+    A OR B OR C match → include this document
+
+{ "Song Title": { $regex: query, $options: "i" } }
+What is $regex?
+    Meaning:
+    Search inside “Song Title” where the text contains your query (case insensitive).
+
+Example:
+    query = "love"
+    Matches:
+
+    “Love Song”
+
+    “I Love You”
+
+    “Beloved” (contains "love")

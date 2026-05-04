@@ -1,0 +1,142 @@
+body {
+  background: linear-gradient(135deg, #5bdbd1 0%, #79a9d2 100%);
+}
+
+.search-page {
+  width: 100%;
+  min-height: calc(100vh - 150px);
+  padding: 24px 20px 40px;
+}
+
+.search-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.search-copy {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d8ebf6;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(13, 30, 45, 0.08);
+}
+
+.search-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #14516c;
+  margin-bottom: 8px;
+}
+
+.search-copy h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #0b2336;
+  margin-bottom: 8px;
+}
+
+.search-summary {
+  color: #405565;
+  line-height: 1.6;
+}
+
+.search-results {
+  display: grid;
+  gap: 12px;
+}
+
+.search-result {
+  width: 100%;
+  padding: 18px 20px;
+  border: 1px solid #d6e9f5;
+  border-radius: 14px;
+  background: rgba(248, 251, 255, 0.98);
+  text-align: left;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.search-result:hover,
+.search-result:focus-visible {
+  transform: translateY(-1px);
+  border-color: #7ebdd7;
+  box-shadow: 0 12px 28px rgba(13, 30, 45, 0.12);
+}
+
+.search-result h4 {
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+  color: #0b2336;
+}
+
+.search-result p {
+  margin: 0;
+  color: #526575;
+  line-height: 1.5;
+}
+
+.search-result.empty-state {
+  cursor: default;
+}
+
+.search-result.empty-state:hover,
+.search-result.empty-state:focus-visible {
+  transform: none;
+  border-color: #d6e9f5;
+  box-shadow: none;
+}
+
+@media (max-width: 720px) {
+  .search-page {
+    padding: 16px 12px 30px;
+  }
+
+  .search-copy,
+  .search-result {
+    padding: 16px;
+  }
+}
+
+body.dark-mode {
+  background: #0f172a;
+}
+
+body.dark-mode .search-copy {
+  background: rgba(30, 41, 59, 0.96);
+  border-color: #334155;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+body.dark-mode .search-eyebrow {
+  color: #67e8f9;
+}
+
+body.dark-mode .search-copy h2 {
+  color: #f1f5f9;
+}
+
+body.dark-mode .search-summary {
+  color: #cbd5e1;
+}
+
+body.dark-mode .search-result {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark-mode .search-result:hover,
+body.dark-mode .search-result:focus-visible {
+  border-color: #67e8f9;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+}
+
+body.dark-mode .search-result h4 {
+  color: #f8fafc;
+}
+
+body.dark-mode .search-result p {
+  color: #94a3b8;
+}
